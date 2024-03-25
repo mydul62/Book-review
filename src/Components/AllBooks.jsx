@@ -7,7 +7,7 @@ const AllBooks = ({datas}) => {
       <div className=" flex justify-center mb-4">
         <h2 className="  text-[40px] font-bold font-Playfair">Books</h2>
       </div>
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {
          datas.map((data)=>(
           <Card data={data} key={data.bookId}></Card>
