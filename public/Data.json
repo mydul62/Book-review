@@ -1,0 +1,81 @@
+
+[
+  {
+    "bookId": 1,
+    "bookName": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "image": "https://i.ibb.co/fnSKt0n/mahim5.jpg",
+    "review": "A classic portrayal of the Jazz Age in America, revealing the glamorous and destructive sides of wealth and ambition.",
+    "totalPages": 180,
+    "rating": 4.5,
+    "category": "Fiction",
+    "tags": ["Classics", "Romance", "Tragedy"],
+    "publisher": "Charles Scribner's Sons",
+    "yearOfPublishing": 1925
+  },
+  {
+    "bookId": 2,
+    "bookName": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "image": "https://i.ibb.co/6m3F1dY/mahim6.jpg",
+    "review": "A powerful exploration of racial injustice and moral growth in the Deep South during the 1930s.",
+    "totalPages": 281,
+    "rating": 4.8,
+    "category": "Fiction",
+    "tags": ["Classic", "Social Justice", "Coming of Age"],
+    "publisher": "J. B. Lippincott & Co.",
+    "yearOfPublishing": 1960
+  },
+  {
+    "bookId": 3,
+    "bookName": "1984",
+    "author": "George Orwell",
+    "image": "https://i.ibb.co/5vXfG7J/mahim1.jpg",
+    "review": "A dystopian masterpiece that warns of the dangers of totalitarianism and the erosion of individual freedoms.",
+    "totalPages": 328,
+    "rating": 4.6,
+    "category": "Fiction",
+    "tags": ["Dystopian", "Political", "Philosophical"],
+    "publisher": "Secker & Warburg",
+    "yearOfPublishing": 1949
+  },
+  {
+    "bookId": 4,
+    "bookName": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "image": "https://i.ibb.co/Ks2XXtq/mahim2.jpg",
+    "review": "A poignant portrayal of teenage angst and alienation, capturing the complexities of adolescence.",
+    "totalPages": 224,
+    "rating": 4.3,
+    "category": "Fiction",
+    "tags": ["Classic", "Coming of Age", "Literary Fiction"],
+    "publisher": "Little, Brown and Company",
+    "yearOfPublishing": 1951
+  },
+  {
+    "bookId": 5,
+    "bookName": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "image": "https://i.ibb.co/7VtJBXJ/mahim3.jpg",
+    "review": "An enchanting adventure in Middle-earth, filled with courage, friendship, and the battle between good and evil.",
+    "totalPages": 310,
+    "rating": 4.7,
+    "category": "Fantasy",
+    "tags": ["Adventure", "Epic Fantasy", "Middle-earth"],
+    "publisher": "George Allen & Unwin",
+    "yearOfPublishing": 1937
+  },
+  {
+    "bookId": 6,
+    "bookName": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "image": "https://i.ibb.co/RbGVt3m/mahim4.jpg",
+    "review": "A timeless romance that explores themes of love, marriage, and societal expectations in 19th-century England.",
+    "totalPages": 432,
+    "rating": 4.6,
+    "category": "Fiction",
+    "tags": ["Romance", "Classic", "Satire"],
+    "publisher": "T. Egerton, Whitehall",
+    "yearOfPublishing": 1813
+  }
+]
