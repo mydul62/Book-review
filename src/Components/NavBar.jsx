@@ -40,7 +40,7 @@ const NavBar = () => {
             <NavLink to={"/pagestoread"}>Pages to Read</NavLink>
           </ul>
         </div>
-        <div className="navbar-end gap-3">
+        <div className="navbar-end hidden md:flex gap-3">
           <button className=" text-white bg-[#23BE0A] px-7 py-4 rounded-xl">Sign in</button>
           <button className=" text-white bg-[#59C6D2] px-7 py-4 rounded-xl">Sign up</button>
         </div>
