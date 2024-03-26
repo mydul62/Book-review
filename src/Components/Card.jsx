@@ -14,7 +14,7 @@ const Card = ({ data }) => {
         <div className=" flex gap-3 flex-wrap mb-4">
           {
           tags.slice(0,2).map((tag,idx) =>(
-            <button key={idx} className="py-[7px] bg-[#23BE0A0D] text-[16px] font-medium px-[16px] font-sans text-[#23BE0A]">
+            <button key={idx} className="py-[7px] bg-[#23BE0A0D] text-[16px] font-medium px-[16px] font-sans text-[#23BE0A] rounded-xl">
               {tag}
             </button>
           ))

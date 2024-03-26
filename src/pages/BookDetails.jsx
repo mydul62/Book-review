@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import { saveDataInfo } from "../Hooks/useWishListLocalStore";
+import {  saveDataInfo } from "../Hooks/useWishListLocalStore";
+import { saveReadDataInfo } from "../Hooks/useReadBooks";
 
 const BookDetails = () => {
   const [bookData, setBookData] = useState([]);
@@ -16,6 +17,10 @@ const BookDetails = () => {
 
   const handleAddWishList = (data)=>{
     saveDataInfo(data)
+  }
+  const handleAddReadBook = (data)=>{
+    saveReadDataInfo(data);
+
   }
 
   return (
@@ -67,7 +72,7 @@ const BookDetails = () => {
 
           </div>
           <div className="flex gap-3 py-5">
-          <button className=" text-black bg-transparent px-7 py-4 border border-[#1313134D]  rounded-xl">Read</button>
+          <button onClick={()=>handleAddReadBook(bookData)}  className=" text-black bg-transparent px-7 py-4 border border-[#1313134D]  rounded-xl">Read</button>
           <button onClick={()=>handleAddWishList(bookData)} className=" text-white bg-[#50B1C9] px-7 py-4 rounded-xl">Wishlist</button>
         </div>
         </div>
