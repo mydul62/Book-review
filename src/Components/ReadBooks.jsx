@@ -26,10 +26,10 @@ const ReadBooks = ({ data }) => {
         </h2>
         <p className=" text-[16px] text-[#131313CC]">By : {author}</p>
         <div className="space-y-4  border-b-2 pb-5 w-full">
-          <div className=" flex flew justify-start  items-center gap-4">
+          <div className=" flex flex-wrap justify-start  items-center gap-4">
             <div className=" flex flex-col md:flex-row items-center gap-6">
-              <h2>Tag</h2>
-              <div className=" flex items-center gap-3 flex-wrap ">
+              <h2 className="hidden md:flex ">Tag</h2>
+              <div className=" flex items-center gap-3 ">
           {
           tags.slice(0,3).map((tag,idx) =>(
             <button key={idx} className="py-[7px] bg-[#23BE0A0D] text-[16px] font-medium px-[16px] font-sans text-[#23BE0A] rounded-xl">

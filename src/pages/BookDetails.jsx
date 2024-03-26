@@ -24,7 +24,7 @@ const BookDetails = () => {
   }
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl md:mx-auto ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className="">
           <div className="flex h-[711px] justify-center items-center bg-[#F3F3F3] rounded-xl mb-6">
@@ -35,8 +35,8 @@ const BookDetails = () => {
             />
           </div>
         </div>
-        <div>
-          <div className=" border-b-2 pb-[22px]">
+        <div className=" px-4 md:px-0">
+          <div className=" border-b-2 pb-[22px] ">
             <h2 className=" text-[40px] text-[#131313] font-bold font-Playfair">{bookName}</h2>
             <p className=" text-xl font-medium font-sans text-[#131313CC]">By : {author}</p>
           </div>
@@ -71,7 +71,7 @@ const BookDetails = () => {
             <h2>{rating}</h2>
 
           </div>
-          <div className="flex gap-3 py-5">
+          <div className="flex justify-between md:justify-start gap-3 py-5">
           <button onClick={()=>handleAddReadBook(bookData)}  className=" text-black bg-transparent px-7 py-4 border border-[#1313134D]  rounded-xl">Read</button>
           <button onClick={()=>handleAddWishList(bookData)} className=" text-white bg-[#50B1C9] px-7 py-4 rounded-xl">Wishlist</button>
         </div>
