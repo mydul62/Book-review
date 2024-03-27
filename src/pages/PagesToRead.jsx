@@ -25,7 +25,7 @@ const PagesToRead = () => {
   const graphdata =getReadDataInfo()
 useEffect(()=>{
    setGraphData(graphdata)
-},[1])
+},[])
   return (
     <div className=' max-w-7xl mx-auto flex justify-center items-center'>
       <BarChart

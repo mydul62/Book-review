@@ -19,14 +19,14 @@ const Shoped = () => {
   return (
     <>
     <div className=" max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-6">
-    <div className="col-span-4 border-2 border-dashed">
+    <div className="col-span-4 border-r-2 mr-6 border-dashed">
       {
         datas.map((data)=>(
           <BuyCard key={data.bookId} data={data}></BuyCard>
         ))
       }
     </div>
-    <div className="col-span-full md:col-span-2 border">
+    <div className="col-span-full md:col-span-2 ">
     { 
       datas.map((data)=>(
         <div key={data.bookId} className=" ">

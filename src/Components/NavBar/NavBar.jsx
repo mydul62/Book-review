@@ -5,10 +5,10 @@ import { getBuyInfo } from "../../Hooks/BuyBookStorage";
 import { useEffect, useState } from "react";
 
 const NavBar = () => {
-  const [shopCount, setShopCount] = useState(0);
+  const [shopCount, setShopCount] = useState([]);
 
   const shopCounts = getBuyInfo();
-       
+ 
   useEffect(() => {
     setShopCount(shopCounts);
   }, []); 

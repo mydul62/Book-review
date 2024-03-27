@@ -3,7 +3,8 @@ import { MdOutlineContactPage } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
-const ReadBooks = ({ data }) => {
+const ReadBooks = ({ data,Bookdatas }) => {
+  console.log(data);
   const {
     bookName,
     author,
