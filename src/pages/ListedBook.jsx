@@ -24,29 +24,42 @@ const ListedBook = () => {
     let sortedBookData;
     let sortedWishData;
     const targetValue = parseInt(event.target.value);
-    if (targetValue === 1) {
-      sortedBookData = [...Bookdatas].sort((a, b) => b.rating - a.rating);
-      sortedWishData = [...datas].sort((a, b) => b.rating - a.rating);
-    }else if (targetValue === 2) {
-      sortedBookData = [...Bookdatas].sort((a, b) => b.totalPages - a.totalPages);
-      sortedWishData = [...datas].sort((a, b) => b.totalPages - a.totalPages);
-    }else if (targetValue === 3) {
-      sortedBookData = [...Bookdatas].sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
-      sortedWishData = [...datas].sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
+    switch (targetValue) {
+      case 1:
+        sortedBookData = [...Bookdatas].sort((a, b) => b.rating - a.rating);
+        sortedWishData = [...datas].sort((a, b) => b.rating - a.rating);
+        break;
+      case 2:
+        sortedBookData = [...Bookdatas].sort(
+          (a, b) => b.totalPages - a.totalPages
+        );
+        sortedWishData = [...datas].sort((a, b) => b.totalPages - a.totalPages);
+        break;
+      case 3:
+        sortedBookData = [...Bookdatas].sort(
+          (a, b) => b.yearOfPublishing - a.yearOfPublishing
+        );
+        sortedWishData = [...datas].sort(
+          (a, b) => b.yearOfPublishing - a.yearOfPublishing
+        );
     }
     setBookData(sortedBookData);
     setWishData(sortedWishData);
   };
-  
 
   return (
     <div className="max-w-7xl mx-auto">
       <div>
         <div className=" flex justify-center items-center py-8 bg-[#1313130D] rounded-xl">
-          <h2 className=" text-[#131313] font-bold font-sans text-3xl">Book</h2>
+          <h2 className=" text-[#131313] font-bold font-sans text-3xl">
+            Books
+          </h2>
         </div>
         <div className="flex justify-center  py-6">
-          <select onChange={handleSort} className="select select-info bg-[#23BE0A] border-none  w-[200px]">
+          <select
+            onChange={handleSort}
+            className="select select-info bg-[#23BE0A] border-none  w-[200px]"
+          >
             <option selected disabled defaultValue>
               Sort By
             </option>

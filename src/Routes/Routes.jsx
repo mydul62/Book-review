@@ -6,6 +6,9 @@ import PagesToRead from "../pages/PagesToRead";
 import MainRoot from "../Root/MainRoot";
 import BookDetails from "../pages/BookDetails";
 import ErrorPage from "../pages/ErrorPage";
+import BuyBooks from "../pages/BuyBooks";
+import Shoped from "../pages/Shoped";
+import BuyBookDetails from "../pages/BuyBookDetails";
 
 
 const router = createBrowserRouter([
@@ -29,7 +32,19 @@ const router = createBrowserRouter([
       },{
         path:'/bookdetails/:id',
         element:<BookDetails></BookDetails>,
-        loader:()=>fetch('../../public/Data.json')
+        loader:()=>fetch('../../public/Data.json'),
+      },{
+        path:"/buybook",
+        element:<BuyBooks></BuyBooks>,
+        loader:()=>fetch('../../public/BookData.json')
+      },{
+        path:"/shoped",
+        element:<Shoped></Shoped>,
+      },
+      {
+        path:'/buybookdelatis/:id',
+        element:<BuyBookDetails></BuyBookDetails>,
+        loader:()=>fetch('../../public/BookData.json'),
       }
     ]
   }

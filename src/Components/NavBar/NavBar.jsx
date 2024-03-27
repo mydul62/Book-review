@@ -1,6 +1,14 @@
 import { NavLink } from "react-router-dom";
+import { MdOutlineShoppingCart } from "react-icons/md";
 import './Navbar.css'
+import { getBuyInfo } from "../../Hooks/BuyBookStorage";
+import { useEffect, useState } from "react";
 const NavBar = () => {
+  const [shopCount,setShopCount]=useState(0)
+  const shopCounts = getBuyInfo()
+   useEffect(()=>{
+    setShopCount(shopCounts)
+  },[shopCounts])
   return (
     <div>
       <div className="navbar max-w-7xl mx-auto my-8 font-sans">
@@ -29,6 +37,8 @@ const NavBar = () => {
               <NavLink to={"/"}>Home</NavLink>
               <NavLink to={"/listedbooks"}>Listed Books</NavLink>
               <NavLink to={"/pagestoread"}>Pages to Read</NavLink>
+              <NavLink to={"/buybook"}>Buy Books</NavLink>
+            <NavLink to={"/shoped"}>shop</NavLink>
             </ul>
           </div>
           <a className="btn btn-ghost text-3xl font-bold">Book Vibe</a>
@@ -38,6 +48,15 @@ const NavBar = () => {
             <NavLink to={"/"}>Home</NavLink>
             <NavLink to={"/listedbooks"}>Listed Books</NavLink>
             <NavLink to={"/pagestoread"}>Pages to Read</NavLink>
+            <NavLink to={"/buybook"}>Buy Books</NavLink>
+            <NavLink to={"/shoped"}>
+              <div className=" relative">
+              <MdOutlineShoppingCart size={20} />
+              <div className=" absolute h-5 w-5 top-[-15px] text-[14px] right-[-15px] border-2 border-[#23BE0A] flex justify-center items-center rounded-full">
+                {shopCount.length}
+              </div>
+              </div>
+</NavLink>
           </ul>
         </div>
         <div className="navbar-end hidden md:flex gap-3">
