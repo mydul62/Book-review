@@ -9,7 +9,7 @@ const BookDetailsCard = ({bookData,handleAddReadBook,handleAddWishList,showreadb
    }
   return (
     <div>
-      <div className="max-w-7xl md:mx-auto ">
+      <div className="max-w-7xl w-[95%] md:mx-auto ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className="">
           <div className="flex h-[711px] justify-center items-center bg-[#F3F3F3] rounded-xl mb-6">

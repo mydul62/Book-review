@@ -18,9 +18,9 @@ const router = createBrowserRouter([
     errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
-        path:"/",
+        index:true,
         element:<Home/>,
-        loader:()=>fetch('../../public/Data.json')
+        loader:()=>fetch('/Data.json')
       },
       {
         path:"/listedbooks",
@@ -32,11 +32,11 @@ const router = createBrowserRouter([
       },{
         path:'/bookdetails/:id',
         element:<BookDetails></BookDetails>,
-        loader:()=>fetch('../../public/Data.json'),
+        loader:()=>fetch('/Data.json'),
       },{
         path:"/buybook",
         element:<BuyBooks></BuyBooks>,
-        loader:()=>fetch('../../public/BookData.json')
+        loader:()=>fetch('/BookData.json')
       },{
         path:"/shoped",
         element:<Shoped></Shoped>,
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
       {
         path:'/buybookdelatis/:id',
         element:<BuyBookDetails></BuyBookDetails>,
-        loader:()=>fetch('../../public/BookData.json'),
+        loader:()=>fetch('/BookData.json'),
       }
     ]
   }

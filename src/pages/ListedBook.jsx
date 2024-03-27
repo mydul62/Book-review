@@ -48,7 +48,7 @@ const ListedBook = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl w-[90%] mx-auto">
       <div>
         <div className=" flex justify-center items-center py-8 bg-[#1313130D] rounded-xl">
           <h2 className=" text-[#131313] font-bold font-sans text-3xl">

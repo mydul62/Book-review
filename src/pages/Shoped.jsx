@@ -18,8 +18,8 @@ const Shoped = () => {
  )
   return (
     <>
-    <div className=" max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-6">
-    <div className="col-span-4 border-r-2 mr-6 border-dashed">
+    <div className=" max-w-7xl  mx-auto grid grid-cols-1 md:grid-cols-6">
+    <div className=" col-span-full md:col-span-4 md:border-r-2 mr-6 border-dashed">
       {
         datas.map((data)=>(
           <BuyCard key={data.bookId} data={data}></BuyCard>
@@ -37,7 +37,7 @@ const Shoped = () => {
         </div>
       ))
     }
-    <div className=" flex justify-end mr-6">
+    <div className=" flex justify-end md:mr-6">
       <h2>Total:{totalPrice}tk</h2>
     </div>
     </div>

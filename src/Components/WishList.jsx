@@ -31,7 +31,7 @@ const WishList = ({ data }) => {
               <h2 className="hidden md:flex ">Tag</h2>
               <div className=" flex items-center gap-3 ">
           {
-          tags.slice(0,3).map((tag,idx) =>(
+          tags.slice(0,2).map((tag,idx) =>(
             <button key={idx} className="py-[7px] bg-[#23BE0A0D] text-[16px] font-medium px-[16px] font-sans text-[#23BE0A] rounded-xl">
               #{tag}
             </button>

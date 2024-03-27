@@ -2,7 +2,7 @@
 import Card from "./Card";
 const AllBooks = ({datas}) => {
   return (
-    <div className=" max-w-7xl mx-auto my-10">
+    <div className=" max-w-7xl w-[90%] mx-auto my-10">
 
       <div className=" flex justify-center mb-4">
         <h2 className="  text-[40px] font-bold font-Playfair">Books</h2>
