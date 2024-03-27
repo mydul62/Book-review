@@ -13,6 +13,7 @@ const WishList = ({ data }) => {
     bookId,
     image,
     totalPages,
+    yearOfPublishing
   } = data;
   return (
     <div className="md:grid flex flex-col  md:grid-cols-12   gap-6 border border-[#13131326] p-6 rounded-xl">
@@ -43,7 +44,7 @@ const WishList = ({ data }) => {
               <h2 className=" flex gap-2 text-[#131313CC] font-sans text-[16px]">
                 {" "}
                 <CiLocationOn size={20} />
-                Year of Publishing: 1924
+                Year of Publishing: {yearOfPublishing}
               </h2>
             </div>
           </div>

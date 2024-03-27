@@ -61,14 +61,14 @@ const BookDetails = () => {
          </div>
           </div>
           <div className="grid grid-cols-2 justify-center  items-center space-y-4 pt-5">
-            <h2>Number of Pages:</h2>
-            <h2>{totalPages}</h2>
-            <h2>Publisher:</h2>
-            <h2>{publisher}</h2>
-            <h2>Year of Publishing:</h2>
-            <h2>{yearOfPublishing}</h2>
-            <h2>Rating:</h2>
-            <h2>{rating}</h2>
+            <h2 className="text-[#131313B3] text-[16px]">Number of Pages:</h2>
+            <h2 className="text-[#131313] text-[16px] font-semibold">{totalPages}</h2>
+            <h2 className="text-[#131313B3] text-[16px]">Publisher:</h2>
+            <h2 className="text-[#131313] text-[16px] font-semibold">{publisher}</h2>
+            <h2 className="text-[#131313B3] text-[16px]">Year of Publishing:</h2>
+            <h2 className="text-[#131313] text-[16px] font-semibold">{yearOfPublishing}</h2>
+            <h2 className="text-[#131313B3] text-[16px]">Rating:</h2>
+            <h2 className="text-[#131313] text-[16px] font-semibold">{rating}</h2>
 
           </div>
           <div className="flex justify-between md:justify-start gap-3 py-5">
