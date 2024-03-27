@@ -32,7 +32,15 @@ const NavBar = () => {
             <NavLink to={"/listedbooks"}>Listed Books</NavLink>
             <NavLink to={"/pagestoread"}>Pages to Read</NavLink>
             <NavLink to={"/buybook"}>Buy Books</NavLink>
-            <NavLink to={"/shoped"}>Your Card </NavLink>
+            <NavLink to={"/shoped"}>Your Cart </NavLink>
+            <div className="  flex justify-between md:hidden gap-3">
+          <button className="text-white bg-[#23BE0A] px-4 py-2 rounded-xl">
+            Sign in
+          </button>
+          <button className="text-white bg-[#59C6D2] px-4 py-2 rounded-xl">
+            Sign up
+          </button>
+        </div>
           </ul>
             </div>
           </div>
