@@ -1,8 +1,12 @@
+import { saveBuyInfo } from "../Hooks/BuyBookStorage";
 
 
 const BookDetailsCard = ({bookData,handleAddReadBook,handleAddWishList,showreadbutton,showbuybutton}) => {
   const {bookName, author, image, review, rating, category, tags, publisher,totalPages,yearOfPublishing } =
   bookData;
+   const handlebuyBook = (data)=>{
+    saveBuyInfo(data);
+   }
   return (
     <div>
       <div className="max-w-7xl md:mx-auto ">
@@ -61,7 +65,7 @@ const BookDetailsCard = ({bookData,handleAddReadBook,handleAddWishList,showreadb
           }
           {
             showbuybutton && <div className="flex justify-between md:justify-start gap-3 py-5">
-            <button className=" bg-[#5d9e54f7] px-7 py-4 border ounded-xl rounded-xl text-white">Buy Now</button>
+            <button onClick={()=>handlebuyBook(bookData)} className=" bg-[#5d9e54f7] px-7 py-4 border ounded-xl rounded-xl text-white">Buy Now</button>
           </div>
           }
         </div>

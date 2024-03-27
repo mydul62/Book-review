@@ -8,13 +8,15 @@ export const getBuyInfo =()=>{
 export const saveBuyInfo =(info)=>{
   
   const BuyDatas = getBuyInfo();
-  const isExistBuyData= BuyDatas.find((data)=>data.bookId == info.bookId);
-  
-  if(isExistBuyData){
-    toast.error("You have added")
-  }else{
     BuyDatas.push(info)
     localStorage.setItem('Buydata',JSON.stringify(BuyDatas))
-    toast.success('Congratulation, Added Done')
-  }
+    toast.success('Congratulation, Buy Done')
+  
+}
+export const deleteBuyItem=(info)=>{
+  const BuyDatas = getBuyInfo();
+  
+  BuyDatas.push(info)
+  localStorage.setItem('Buydata',JSON.stringify(BuyDatas))
+  toast.success('Congratulation, Buy Done')
 }

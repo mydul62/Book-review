@@ -1,10 +1,10 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { getReadDataInfo } from '../Hooks/useReadBooks';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
-const data =getReadDataInfo()
+
 
 const getPath = (x, y, width, height) => {
   return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}
@@ -21,6 +21,11 @@ const TriangleBar = (props) => {
 };
 
 const PagesToRead = () => {
+  const [data,setGraphData]=useState([])
+  const graphdata =getReadDataInfo()
+useEffect(()=>{
+   setGraphData(graphdata)
+},[1])
   return (
     <div className=' max-w-7xl mx-auto flex justify-center items-center'>
       <BarChart

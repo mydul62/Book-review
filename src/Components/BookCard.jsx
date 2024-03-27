@@ -39,7 +39,7 @@ const BookCard = ({ data }) => {
             <h3 className="font-sans font-medium text-[16px]">{category}</h3>
           </div>
           <div>
-            <h2>Price: <span className="font-bold">{price}</span></h2>
+            <h2>Price: <span className="font-bold">{price}</span> tk</h2>
           </div>
           <div>
             <h3 className="flex gap-2 items-center text-[16px] font-medium">
