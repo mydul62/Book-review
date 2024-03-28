@@ -55,9 +55,6 @@ const BuyCard = ({data}) => {
           <h3>price: {price}tk</h3>
         </div>
       </div>
-      <div onClick={()=>handleDeleteItem(data)} className=" absolute top-0 right-0">
-      <TiDeleteOutline  size={30}/>
-      </div>
     </div>
   );
 };
