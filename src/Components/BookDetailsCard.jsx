@@ -9,7 +9,7 @@ const BookDetailsCard = ({bookData,handleAddReadBook,handleAddWishList,showreadb
    }
   return (
     <div>
-      <div className="max-w-7xl w-[95%] md:mx-auto ">
+      <div className="max-w-7xl w-[95%] mx-auto ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className="">
           <div className="flex h-[711px] justify-center items-center bg-[#F3F3F3] rounded-xl mb-6">
@@ -33,12 +33,12 @@ const BookDetailsCard = ({bookData,handleAddReadBook,handleAddWishList,showreadb
              {review}
             </p>
           </div>
-          <div className=" flex items-center gap-7 border-b-2  mt-[50px] pb-5">
+          <div className=" flex items-center gap-4 md:gap-7 border-b-2  mt-[50px] pb-5">
           <h2>tag</h2>
-         <div>
+         <div className=" flex gap-1 flex-wrap">
          {
           tags && tags.map((tag,idx) =>(
-            <button key={idx} className="py-[7px] bg-[#23BE0A0D] text-[16px] font-medium px-[16px] font-sans text-[#23BE0A]">
+            <button key={idx} className="py-[7px] bg-[#23BE0A0D] text-[16px] font-medium px-[10px] font-sans text-[#23BE0A]">
               {tag}
             </button>
           ))
@@ -59,13 +59,13 @@ const BookDetailsCard = ({bookData,handleAddReadBook,handleAddWishList,showreadb
 
           {
             showreadbutton && <div className="flex justify-between md:justify-start gap-3 py-5">
-            <button onClick={()=>handleAddReadBook(bookData)}  className=" text-black bg-transparent px-7 py-4 border border-[#1313134D]  rounded-xl">Read</button>
-            <button onClick={()=>handleAddWishList(bookData)} className=" text-white bg-[#50B1C9] px-7 py-4 rounded-xl">Wishlist</button>
+            <button onClick={()=>handleAddReadBook(bookData)}  className=" text-black bg-transparent px-4  py-2 md:px-7 md:py-4 border border-[#1313134D]  rounded-xl">Read</button>
+            <button onClick={()=>handleAddWishList(bookData)} className=" text-white px-4  py-2  bg-[#50B1C9] md:px-7 md:py-4 rounded-xl">Wishlist</button>
           </div>
           }
           {
             showbuybutton && <div className="flex justify-between md:justify-start gap-3 py-5">
-            <button onClick={()=>handlebuyBook(bookData)} className=" bg-[#5d9e54f7] px-7 py-4 border ounded-xl rounded-xl text-white">Buy Now</button>
+            <button onClick={()=>handlebuyBook(bookData)} className=" bg-[#5d9e54f7] px-4  py-2 md:px-7 md:py-4 border ounded-xl rounded-xl text-white">Buy Now</button>
           </div>
           }
         </div>
