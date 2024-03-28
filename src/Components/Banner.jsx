@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Typewriter from 'react-ts-typewriter';
 const Banner = () => {
 
@@ -8,7 +9,11 @@ const Banner = () => {
     <img src="/bnrbk.png" className=" md:max-w-sm float-left" />
     <div  className=" w-[100%] md:w-[722px] md:space-y-12 mt-6  md:mt-0">
       <h1 className="text-[35px] md:text-[56px]   font-bold font-Playfair ">Books to freshen up <br></br>your  <Typewriter speed={400} cursor={false}  loop="true" text=' bookshelf' /></h1>
-      <button className="px-7 py-5 text-xl font-bold bg-[#23BE0A] text-white font-sans mt-4 md:mt-0 rounded-xl">View The List</button>
+      <div className='mt-8 md:mt-0'>
+      <Link to={'/listedbooks'} >
+      <button className="px-7 py-5 text-xl font-bold bg-[#23BE0A] text-white font-sans rounded-xl">View The List</button>
+      </Link>
+      </div>
     </div>
   </div>
 </div>

@@ -1,4 +1,3 @@
-import { MdOutlineShoppingCart } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {

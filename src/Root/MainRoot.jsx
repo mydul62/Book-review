@@ -6,8 +6,12 @@ const MainRoot = () => {
   return (
     <div>
       <NavBar></NavBar>
+      <div className="  mt-[100px] md:mt-0">
       <Outlet></Outlet>
+      </div>
+      <div className=" mt-[80px]">
       <Footer></Footer>
+      </div>
     </div>
   );
 };

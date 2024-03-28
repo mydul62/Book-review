@@ -1,33 +1,28 @@
 import { NavLink } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import "./Navbar.css";
-import { getBuyInfo } from "../../Hooks/BuyBookStorage";
-import { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
+import { useState } from "react";
 
 const NavBar = () => {
-  const [shopCount, setShopCount] = useState([]);
   const [show,setShow]=useState(true)
 
-  let shopCounts = getBuyInfo();
-  useEffect(() => {
-    setShopCount(shopCounts);
-  }, []);
+
  const handleOnchange =()=>{
     setShow(!show)
  }
   return (
-      <div className="relative md:navbar max-w-7xl mx-auto font-sans p-6">
-        <div className=" md:navbar-start items-center flex justify-between ">
-          <div className="  items-center flex md:hidden">
+      <div className=" md:navbar max-w-7xl mx-auto font-sans z-40 h-20 md:h-40  flex items-center  top-0 bg-[#10ac84] md:bg-transparent md:relative fixed w-full">
+        <div className=" md:navbar-start ml-4 items-center flex justify-between fixed md:static  ">
+          <div className="  items-center flex md:hidden ">
             <div onClick={handleOnchange}>
               {
                 show?<GiHamburgerMenu size={30} /> :<RxCross2  size={40}/>
               }
             </div>
-            <div className={`absolute top-24 ${show?'left-[-1000px] ' :'left-0'} duration-200 z-50 transition  w-[300px] text-center min-h-[400px] rounded-r-xl bg-slate-300`}>
-            <ul className="  flex flex-col  px-10 space-y-8 py-10 *:font-sans text-[20px] ">
+            <div className={`absolute top-16 ${show?'left-[-500px] ' :'-left-6'} ease-in duration-300 z-40  w-[300px] text-center min-h-screen items-center flex justify-center rounded-r-xl bg-[#c8d6e5] opacity-95 font-bold`}>
+            <ul className=" menu  flex flex-col  px-10 space-y-12 py-10 *:font-sans text-[20px] ">
             <NavLink to={"/"}>Home</NavLink>
             <NavLink to={"/listedbooks"}>Listed Books</NavLink>
             <NavLink to={"/pagestoread"}>Pages to Read</NavLink>
@@ -57,9 +52,6 @@ const NavBar = () => {
             <NavLink to={"/shoped"}>
               <div className="relative">
                 <MdOutlineShoppingCart size={20} />
-                <div className="absolute h-5 w-5 top-[-15px] text-[10px] right-[-15px] border-2 border-[#23BE0A] flex justify-center items-center rounded-full">
-                  {shopCount.length}
-                </div>
               </div>
             </NavLink>
           </ul>

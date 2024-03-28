@@ -27,7 +27,7 @@ const PagesToRead = () => {
 
   if (data.length === 0) {
     return (
-      <div className="flex max-w-[1280px] w-[95%] justify-center min-h-[calc(100vh-120px)] items-center">
+      <div className="flex max-w-[1280px] w-[95%] mx-auto justify-center min-h-[calc(100vh-120px)] items-center">
         <div className="text-center space-y-6">
           <h2 className="font-semibold font-Playfair mb-6 text-2xl">You Read book 0%</h2>
           <Link to={"/"}>

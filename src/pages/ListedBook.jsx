@@ -79,7 +79,7 @@ const ListedBook = () => {
           <TabPanel>
             <div className=" mt-8 space-y-6">
               {Bookdatas.map((data) => (
-                <ReadBooks Bookdatas={Bookdatas} data={data} key={data.bookId}></ReadBooks>
+                <ReadBooks  data={data} key={data.bookId}></ReadBooks>
               ))}
             </div>
           </TabPanel>
